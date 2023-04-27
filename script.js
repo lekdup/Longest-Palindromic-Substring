@@ -59,38 +59,67 @@
 
 
 
-var longestPalindrome = function (str) {
-    if( str.length < 1 || str === null) return "";
+// var longestPalindrome = function (str) {
+//     if( str.length < 1 || str === null) return "";
 
-    let longestSubstring = "";
+//     let longestSubstring = "";
 
-    for (let i = 0; i < str.length; i++) {
-        let oddPalindrome = expandFromCenter(str, i, i);
-        let evenPalindrome = expandFromCenter(str, i-1, i);
+//     for (let i = 0; i < str.length; i++) {
+//         let oddPalindrome = expandFromCenter(str, i, i);
+//         let evenPalindrome = expandFromCenter(str, i-1, i);
 
-        if( oddPalindrome.length > longestSubstring.length) {
-            longestSubstring = oddPalindrome;
-        }
-        if(evenPalindrome.length > longestSubstring.length){
-            longestSubstring = evenPalindrome;
-        }
-    }
-    return longestSubstring;
-}
+//         if( oddPalindrome.length > longestSubstring.length) {
+//             longestSubstring = oddPalindrome;
+//         }
+//         if(evenPalindrome.length > longestSubstring.length){
+//             longestSubstring = evenPalindrome;
+//         }
+//     }
+//     return longestSubstring;
+// }
 
-function expandFromCenter(str, left, right) {
-    let i = 0;
-    while(str[left - i] && str[left-i] === str[right + i]){
-        i++;
-    }
-    i--;
+// function expandFromCenter(str, left, right) {
+//     let i = 0;
+//     while(str[left - i] && str[left-i] === str[right + i]){
+//         i++;
+//     }
+//     i--;
     
 
-    return str.slice(left - i, right + i + 1);
-}
-
-console.log(longestPalindrome("cbbd"));
+//     return str.slice(left - i, right + i + 1);
+// }
+// console.log(longestPalindrome("babad"));
 
 let s = "babad";
+console.log(s.slice(1 - 1, 2));
 
-console.log(s.slice(1 - 1, 3 + 1 + 1));
+// var longestPalindrome = function (s) {
+//     if (s.length < 1 || s === null) return "";
+
+//     let longestSubstring = "";
+
+//     for ( let i = 0; i < s.length; i++) {
+//         let oddPalidrome = expandAroundCenter(s, i, i);
+//         let evenPalindrome = expandAroundCenter(s, i - 1, i);
+
+//         if(oddPalidrome.length > longestSubstring.length) {
+//             longestSubstring = oddPalidrome;
+//         }
+//         if(evenPalindrome.length > longestSubstring.length) {
+//             longestSubstring = evenPalindrome;
+//         }
+//     }
+//     return longestSubstring
+// }
+
+// let expandAroundCenter = (s, left, right) => {
+//     let i = 0;
+//     while (s[left - i] && s[left - i] === s[right + 1]) {
+//         i++;
+//     }
+//     i--;
+
+//     return s.slice(left - i, right + i + 1);
+// }
+
+// console.log(longestPalindrome("babad"));
