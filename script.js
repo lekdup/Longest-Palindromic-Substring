@@ -90,8 +90,8 @@
 // }
 // console.log(longestPalindrome("babad"));
 
-let s = "babad";
-console.log(s.slice(1 - 1, 2));
+// let s = "babad";
+// console.log(s.slice(1 - 1, 2));
 
 // var longestPalindrome = function (s) {
 //     if (s.length < 1 || s === null) return "";
